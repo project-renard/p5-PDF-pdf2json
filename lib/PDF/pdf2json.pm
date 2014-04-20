@@ -19,7 +19,7 @@ Parameters you can pass in:
 
 =over 4
 
-=item page: integer of single page to process (0-based)
+=item page: integer of single page to process (1-based)
 
 If this parameter is not specified, all pages will be returned.
 
@@ -28,8 +28,6 @@ If this parameter is not specified, all pages will be returned.
 Default is true.
 
 =back
-
-NOTE: this function modifies the pdf2json output so that all page numbers are on a 0-based index
 
 =cut
 sub pdf2json {
@@ -40,8 +38,8 @@ sub pdf2json {
 	my @args = ();
 	if( exists $param{page} ) {
 		die "page number must be integer" unless $param{page} =~ /^\d+$/;
-		push @args, ( '-f', $param{page} + 1 ); # add 1 because page param is 0-based, but pdf2json is 1-based
-		push @args, ( '-l', $param{page} + 1 );
+		push @args, ( '-f', $param{page} );
+		push @args, ( '-l', $param{page} );
 	}
 	if( exists $param{quiet} ) {
 		push @args, '-q' if !!$param{quiet};
@@ -60,8 +58,6 @@ sub pdf2json {
 	my $json_data = file( $temp_fh->filename )->slurp();
 
 	my $data = decode_json( $json_data );
-
-	$_->{number}-- for @$data; # convert to 0-based index
 
 	$data;
 }
