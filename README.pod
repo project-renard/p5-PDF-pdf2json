@@ -8,7 +8,7 @@ PDF::pdf2json - helper module to retrieve data from pdf2json
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -59,7 +59,7 @@ Parameters you can pass in:
 
 =over 4
 
-=item page: integer of single page to process (0-based)
+=item page: integer of single page to process (1-based)
 
 If this parameter is not specified, all pages will be returned.
 
@@ -68,8 +68,6 @@ If this parameter is not specified, all pages will be returned.
 Default is true.
 
 =back
-
-NOTE: this function modifies the pdf2json output so that all page numbers are on a 0-based index
 
 =head1 SEE ALSO
 
