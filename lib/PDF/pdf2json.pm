@@ -72,31 +72,33 @@ version 0.001
   #       "height" : 1188,
   #       "fonts" : [
   #          {
-  #             "color" : "#000000",
   #             "fontspec" : "0",
   #             "family" : "Times",
-  #             "size" : "12"
+  #             "size" : "12",
+  #             "color" : "#000000"
   #          }
   #       ],
   #       "text" : [
   #          {
-  #             "width" : 24,
-  #             "left" : 223,
   #             "top" : 192,
-  #             "data" : "test",
+  #             "left" : 223,
+  #             "width" : 24,
+  #             "height" : 13,
   #             "font" : 0,
-  #             "height" : 13
+  #             "data" : "test"
   #          },
   #          {
-  #             "width" : 7,
-  #             "left" : 455,
   #             "top" : 1044,
-  #             "data" : "1",
+  #             "left" : 455,
+  #             "width" : 7,
+  #             "height" : 13,
   #             "font" : 0,
-  #             "height" : 13
+  #             "data" : "1"
   #          }
   #       ]
-  #    }, # ... more data for each page of the PDF
+  #    },
+  #    # ... more data for each page of the PDF
+  # ]
 
 =head1 METHODS
 
