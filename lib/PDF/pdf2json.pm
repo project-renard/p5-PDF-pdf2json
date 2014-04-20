@@ -1,6 +1,6 @@
 package PDF::pdf2json;
 # ABSTRACT: helper module to retrieve data from pdf2json
-$PDF::pdf2json::VERSION = '0.001';
+$PDF::pdf2json::VERSION = '0.002';
 use strict;
 use warnings;
 
@@ -57,7 +57,7 @@ PDF::pdf2json - helper module to retrieve data from pdf2json
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
